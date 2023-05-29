@@ -1,0 +1,218 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow: hidden;
+}
+
+.yol {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+.yol img {
+  width: 100%;
+  height: 100%;
+}
+
+.masin {
+  width: 600px;
+  height: 400px;
+  position: absolute;
+  bottom: -50px;
+  left: 0px;
+  animation: Movemasin 10s linear infinite;
+}
+.masin .car-img {
+  width: 100%;
+  height: 100%;
+}
+
+.masin .on,
+.masin .arxa {
+  position: absolute;
+  bottom: 145px;
+  width: 80px;
+  height: 82px;
+  animation: RotateWheel linear 0.1s infinite;
+}
+.masin .arxa {
+  left: 110px;
+}
+
+.masin .on {
+  right: 110px;
+}
+
+@keyframes Movemasin {
+  0% {
+    transform: translateX(-600px) rotateY(0deg) translateY(80px);
+  }
+
+  50% {
+    transform: translateX(100vw) rotateY(0deg) translateY(80px);
+  }
+
+  51% {
+    transform: translateX(100vw) rotateY(180deg) translateY(-80px);
+  }
+
+  90% {
+    transform: translateX(-110%) rotateY(180deg) translateY(-80px);
+  }
+
+  91% {
+    transform: translateX(-110%) rotateY(0deg);
+  }
+
+  100% {
+    transform: translateX(-600px) rotateY(0deg);
+  }
+}
+
+@keyframes RotateWheel {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+
+.qirmizi,
+.sari,
+.yasil {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  right: 200px;
+}
+.qirmizi {
+  background: red;
+  animation-duration: 12s;
+  animation-name: QirmiziIsiq;
+  animation-iteration-count: infinite;
+  top: 0px;
+}
+.sari {
+  background: rgb(137, 137, 0);
+  animation-duration: 10s;
+  animation-name: SariIsiq;
+  animation-iteration-count: infinite;
+  top: 100px;
+}
+.yasil {
+  background: green;
+  animation-duration: 10s;
+  animation-name: YasilIsiq;
+  animation-iteration-count: infinite;
+  top: 200px;
+}
+
+@keyframes QirmiziIsiq {
+  0% {
+    opacity: 1;
+  }
+  20% {
+    opacity: 1;
+  }
+  22.5% {
+    opacity: 0.1;
+  }
+  25% {
+    opacity: 1;
+  }
+  27.5% {
+    opacity: 0.1;
+  }
+  30% {
+    opacity: 1;
+  }
+
+  32% {
+    opacity: 0.1;
+  }
+
+  40% {
+    opacity: 0.1;
+  }
+  60% {
+    opacity: 0.1;
+  }
+  80% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 0.1;
+  }
+}
+@keyframes SariIsiq {
+  0% {
+    opacity: 0.1;
+  }
+  20% {
+    opacity: 0.1;
+  }
+  40% {
+    opacity: 1;
+  }
+  41.5% {
+    opacity: 0.1;
+  }
+  42.5% {
+    opacity: 1;
+  }
+  43.75% {
+    opacity: 0.1;
+  }
+
+  45% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.1;
+  }
+  60% {
+    opacity: 0.1;
+  }
+  80% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 0.1;
+  }
+}
+@keyframes YasilIsiq {
+  0% {
+    opacity: 0.1;
+  }
+  20% {
+    opacity: 0.1;
+  }
+  40% {
+    opacity: 0.1;
+  }
+  60% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 0.1;
+  }
+  90% {
+    opacity: 1;
+  }
+  95% {
+    opacity: 0.1;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
